@@ -17,7 +17,7 @@ public class StartActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        SearchButton = (Button) findViewById(R.id.btnSearch);
+        SearchButton = (Button) findViewById(R.id.btnSearchBook);
         AboutButton = (Button) findViewById(R.id.btnAbout);
     }
     public void displayMain(View v){

@@ -140,15 +140,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         AsyncHttpClient client = new AsyncHttpClient();
         mDialog.show();
-        client.get(QUERY_URL+urlString,new JsonHttpResponseHandler(){
-            @Override
-            public void onSuccess(JSONObject jsonObject){
+        client.get(QUERY_URL + urlString, new JsonHttpResponseHandler() {
+            //@Override
+            void onSuccess(JSONObject jsonObject) {
                 mDialog.dismiss();
-                Toast.makeText(getApplicationContext(),"Success !",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Success !", Toast.LENGTH_LONG).show();
                 mJSONAdapter.updateDate(jsonObject.optJSONArray("docs"));
             }
-            @Override
-            public  void  onFailure(int statusCode, Throwable throwable, JSONObject error){
+
+           // @Override
+            public void onFailure(int statusCode, Throwable throwable, JSONObject error) {
                 mDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Error: " + statusCode + " " + throwable.getMessage(), Toast.LENGTH_LONG).show();
 
