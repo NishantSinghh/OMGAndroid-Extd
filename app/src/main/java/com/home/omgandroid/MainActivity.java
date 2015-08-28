@@ -22,7 +22,6 @@ import android.widget.ListView;
 import android.support.v7.widget.ShareActionProvider;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -148,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mJSONAdapter.updateDate(jsonObject.optJSONArray("docs"));
             }
 
-           // @Override
+           //@Override
             public void onFailure(int statusCode, Throwable throwable, JSONObject error) {
                 mDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Error: " + statusCode + " " + throwable.getMessage(), Toast.LENGTH_LONG).show();
