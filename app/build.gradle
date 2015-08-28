@@ -3,7 +3,9 @@ apply plugin: 'base'
 android {
     compileSdkVersion 22
     buildToolsVersion '21.1.1'
-
+    lintOptions {
+        abortOnError false
+    }
     defaultConfig {
         applicationId "com.home.omgandroid"
         minSdkVersion 16
